@@ -1,0 +1,17 @@
+{
+  "name": "StudentKit - Academic & Developer Utilities",
+  "short_name": "StudentKit",
+  "description": "158 free, privacy-first, client-side tools for students, engineers, and developers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a73e8"/>
+      <stop offset="1" stop-color="#0d47a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <rect width="64" height="64" rx="14" fill="url(#gBlue)" fill-opacity="0.06"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Quad-color corner accents -->
+  <circle cx="10" cy="10" r="3" fill="#4285F4"/>
+  <circle cx="54" cy="10" r="3" fill="#EA4335"/>
+  <circle cx="54" cy="54" r="3" fill="#34A853"/>
+  <circle cx="10" cy="54" r="3" fill="#FBBC05"/>
+
+  <!-- Graduation Cap / Utility Icon -->
+  <path d="M32 16L12 26L32 36L52 26L32 16Z" fill="#1a73e8" stroke="#0d47a1" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M20 32.5V42.5C20 46.5 25.37 49.5 32 49.5C38.63 49.5 44 46.5 44 42.5V32.5" stroke="#1a73e8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M47 28.5V41C47 42.5 45.5 44 44 44" stroke="#EA4335" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="44" cy="44" r="2" fill="#FBBC05"/>
+</svg>

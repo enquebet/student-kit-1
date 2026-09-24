@@ -1,0 +1,6 @@
+{
+  "name": "StudentKit",
+  "description": "The Student's Digital Toolbox with 100 privacy-first utilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

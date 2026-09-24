@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --google-blue: #4285F4;
+    --google-red: #EA4335;
+    --google-yellow: #FBBC05;
+    --google-green: #34A853;
+  }
+}
+
+/* Premium Google-Style RGB Glows & Borders */
+@keyframes rgb-border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Google Rainbow Neon Border */
+.google-rgb-border {
+  position: relative;
+  border-radius: 1rem;
+  background: white;
+}
+
+.google-rgb-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #4285F4,
+    #9C27B0,
+    #EA4335,
+    #FBBC05,
+    #34A853,
+    #4285F4
+  );
+  background-size: 300% 300%;
+  animation: rgb-border-flow 6s linear infinite;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(4px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.google-rgb-border:hover::before {
+  opacity: 1;
+  filter: blur(8px);
+}
+
+/* Precision Crisp RGB Outline Card */
+.google-rgb-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.google-rgb-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: calc(1.25rem + 1.5px);
+  background: linear-gradient(
+    135deg,
+    #4285F4 0%,
+    #EA4335 30%,
+    #FBBC05 65%,
+    #34A853 100%
+  );
+  background-size: 200% 200%;
+  animation: rgb-border-flow 8s ease infinite;
+  z-index: -1;
+  opacity: 0.35;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.google-rgb-card:hover {
+  transform: translateY(-2px);
+}
+
+.google-rgb-card:hover::before {
+  opacity: 0.9;
+  filter: blur(6px);
+}
+
+/* Google Neon Buttons with Crisp Borders */
+.google-neon-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: #1a73e8;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(66, 133, 244, 0.45), 0 2px 4px rgba(66, 133, 244, 0.2);
+  border: 1.5px solid #174ea6;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.google-neon-btn-primary:hover {
+  background: #1557b0;
+  border-color: #0d47a1;
+  box-shadow: 0 0 24px rgba(66, 133, 244, 0.7), 0 0 8px rgba(66, 133, 244, 0.9);
+  transform: translateY(-1px);
+}
+
+/* Google Multi-RGB Neon Button */
+.google-neon-btn-rgb {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 9999px;
+  color: #1f2937;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  isolation: isolate;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.google-neon-btn-rgb::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    #4285F4,
+    #EA4335,
+    #FBBC05,
+    #34A853,
+    #4285F4
+  );
+  background-size: 300% 300%;
+  animation: rgb-border-flow 4s linear infinite;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(3px);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.google-neon-btn-rgb:hover {
+  transform: translateY(-1px);
+  border-color: #94a3b8;
+  color: #111827;
+}
+
+.google-neon-btn-rgb:hover::before {
+  opacity: 1;
+  filter: blur(8px);
+}
+
+/* Emerald / Green Google Neon */
+.google-neon-btn-green {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: #1e8e3e;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(52, 168, 83, 0.45);
+  border: 1.5px solid #137333;
+  transition: all 0.25s ease;
+}
+
+.google-neon-btn-green:hover {
+  background: #188038;
+  border-color: #0d652d;
+  box-shadow: 0 0 22px rgba(52, 168, 83, 0.7);
+  transform: translateY(-1px);
+}
+
+/* Red Google Neon */
+.google-neon-btn-red {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: #d93025;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(234, 67, 53, 0.45);
+  border: 1.5px solid #b31412;
+  transition: all 0.25s ease;
+}
+
+.google-neon-btn-red:hover {
+  background: #c5221f;
+  border-color: #a50e0e;
+  box-shadow: 0 0 22px rgba(234, 67, 53, 0.7);
+  transform: translateY(-1px);
+}
+
+/* Tactile button border definition */
+button:not([class*="border"]):not([class*="p-0"]):not([class*="google-neon"]):not([class*="bg-transparent"]) {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Google-style subtle animated top progress line */
+.google-rgb-line {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #4285F4 0%,
+    #EA4335 28%,
+    #FBBC05 55%,
+    #34A853 82%,
+    #4285F4 100%
+  );
+  background-size: 200% 100%;
+  animation: rgb-border-flow 4s linear infinite;
+}

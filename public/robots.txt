@@ -1,0 +1,27 @@
+# robots.txt for StudentKit (https://studentkit.dev)
+# Optimized for Googlebot, Bingbot, and modern web crawlers
+
+User-agent: *
+Allow: /
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /categories/
+Allow: /about
+Allow: /privacy
+Allow: /terms
+Allow: /ecosystem
+
+# Googlebot Image Crawler
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /favicon.svg
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://studentkit.dev/sitemap.xml
+Sitemap: /sitemap.xml
